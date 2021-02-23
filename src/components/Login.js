@@ -2,11 +2,10 @@ import { Button, TextField, Typography } from '@material-ui/core'
 import React,{useState} from 'react'
 import {useHistory} from 'react-router-dom'
 import './Login.css'
-const Login = () => {
+const Login = ({ productId, setProductId,viewerId, setViewerId}) => {
 
     // const history=useHistory();
-    const [productId, setProductId] = useState()
-    const [viewerId, setViewerId] = useState()
+  
     const [error,setError] =useState({})
 
 
@@ -85,7 +84,7 @@ const Login = () => {
             color="primary"
             
           >
-            Sign In
+            Search
           </Button> </form>
         </div>
     )
