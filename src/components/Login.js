@@ -4,7 +4,7 @@ import {useHistory} from 'react-router-dom'
 import './Login.css'
 const Login = ({ productId, setProductId,viewerId, setViewerId}) => {
 
-    // const history=useHistory();
+    const history=useHistory();
   
     const [error,setError] =useState({})
 
@@ -25,9 +25,9 @@ const Login = ({ productId, setProductId,viewerId, setViewerId}) => {
 
        
 
-        // if(error.username==="" && error.password===""){
-        //     history.push('/home')
-        // }
+        if(error.productId==="" && error.viewerId===""){
+            history.push('/review')
+        }
         
 
 
