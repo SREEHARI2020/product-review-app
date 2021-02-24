@@ -1,6 +1,7 @@
 import React from 'react'
 import StarIcon from '@material-ui/icons/Star';
-const StarIcons = ({limit}) => {
+import './StarIcons.css';
+const StarIcons = ({limit,name}) => {
 
     let array=[];
     for(let i=1;i<=limit ;i++)
@@ -9,9 +10,11 @@ const StarIcons = ({limit}) => {
   }
     return (
         <div className="Review-stars">
-             {array.map(item=>(item))}
+            <div>{name}</div>
+             <div>{array.map(item=>(item))}</div>
         </div>
     )
 }
 
 export default StarIcons
+

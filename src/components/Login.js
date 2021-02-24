@@ -38,7 +38,7 @@ const Login = ({ productId, setProductId,viewerId, setViewerId}) => {
             <div className="Forms-container">   
 
                 
-         <Typography component="h1" variant="h5">
+         <Typography component="h1" variant="h5" color="error">
           Search For Products
         </Typography>
         <form >

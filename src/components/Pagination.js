@@ -1,3 +1,4 @@
+import { Button } from '@material-ui/core';
 import React from 'react'
 import './Pagination.css'
 
@@ -14,7 +15,7 @@ export const Pagination = ({totalposts,postsperpage,paginate}) => {
                {
                PageNumbers.map(number=>(<li key={number} className='page-item'>
 
-               <button onClick={()=>paginate(number)}  className='page-link'>{number}</button>
+               <Button variant="contained" color="secondary" onClick={()=>paginate(number)}  className='page-link'>{number}</Button>
 
                </li>
                ))
