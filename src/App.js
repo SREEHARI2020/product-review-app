@@ -4,6 +4,7 @@ import Login from './components/Login';
 import{BrowserRouter,Switch,Route} from 'react-router-dom';
 import axios from 'axios';
 import Review from './components/Review';
+import Navbar from './components/Navbar';
 
 
 function App() {
@@ -31,6 +32,10 @@ useEffect(() => {
   FetchData();
 }, [productId,viewerId])
 
+const paginate=(number)=>{
+  Setcurrentpage(number);
+}
+
 const indexofLastPost=currentpage*postsperpage;
 const indexofFirstPost=indexofLastPost-postsperpage;
 const currentposts=posts.slice(indexofFirstPost,indexofLastPost);
@@ -40,14 +45,16 @@ console.log(indexofLastPost, indexofFirstPost,currentposts)
   return (
     <BrowserRouter>
       <div className="App">
+        <Navbar/>
         <Switch>
       <Route exact path='/'> <Login
              productId={productId} setProductId={ setProductId} 
              viewerId={viewerId}  setViewerId={setViewerId}
    
             /></Route>
-      <Route exact path='/review'> <Review
-            currentposts={currentposts} 
+      <Route exact path='/review'> 
+      <Review
+            currentposts={currentposts} paginate={paginate} postsperpage={postsperpage} totalposts={posts.length}
    
             /></Route>
      

@@ -1,0 +1,12 @@
+.review-card-container {
+  width: 400px;
+  background-color: #242424;
+  color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+}
+.review-card-container-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
